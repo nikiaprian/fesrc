@@ -29,7 +29,7 @@ function Navbar() {
     if(key!=null){
       const getApiUser = async () => {
         await axios
-          .get('http://52.87.178.223/user/profile', {
+          .get('http://be.codein.myportfolio.studio/user/profile', {
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${key}`,

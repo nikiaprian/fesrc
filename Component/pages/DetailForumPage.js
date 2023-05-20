@@ -19,7 +19,7 @@ function DetailForumPage() {
   const fetchsetAnswer = useForumStore((state) => state.fetchsetAnswer);
   const fetchAnswerInput = useForumStore((state) => state.fetchAnswerInput);
   useEffect(() => {
-    fetchForumId(`http://52.87.178.223/forums/${idforum}`,key);
+    fetchForumId(`http://be.codein.myportfolio.studio/forums/${idforum}`,key);
     fetchsetAnswer(idforum,key);
     //eslint-disable-next-line
   }, [fetchForumId, idforum, key]);

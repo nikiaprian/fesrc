@@ -11,7 +11,7 @@ import validator from 'validator';
 import useAuthStore from '../store/AuthStore';
 
 const LoginPage = () => {
-  const baseUrl = 'http://52.87.178.223/auth/login';
+  const baseUrl = 'http://be.codein.myportfolio.studio/auth/login';
   const [login, setLogin] = useState({ email: '', password: '' });
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -140,7 +140,7 @@ const LoginPage = () => {
           <Link to="/auth/google/callback">
             <button
               onClick={() =>
-                (window.location = 'http://52.87.178.223/auth/login/google')
+                (window.location = 'http://be.codein.myportfolio.studio/auth/login/google')
               }
               className="py-3 px-3 mt-8 mb-4 w-full justify-center rounded-2xl bg-blue-50 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-200 flex"
             >

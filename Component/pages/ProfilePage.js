@@ -30,7 +30,7 @@ function ProfilePage() {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get('http://52.87.178.223/user/profile', {
+        .get('http://be.codein.myportfolio.studio/user/profile', {
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${token}`,
@@ -44,8 +44,8 @@ function ProfilePage() {
           console.log(e);
         });
     };
-    fetchBlogs('http://52.87.178.223/blogs', token);
-    fetchForums('http://52.87.178.223/forums', token);
+    fetchBlogs('http://be.codein.myportfolio.studio/blogs', token);
+    fetchForums('http://be.codein.myportfolio.studio/forums', token);
     fetchData();
   }, [token, fetchBlogs, fetchForums]);
 
@@ -77,7 +77,7 @@ function ProfilePage() {
     data.append('username', profile?.username);
 
     await axios
-      .patch('http://52.87.178.223/user/update-profile', data, {
+      .patch('http://be.codein.myportfolio.studio/user/update-profile', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

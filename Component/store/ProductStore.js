@@ -36,7 +36,7 @@ const storeBlog = (set) => ({
 
   fetchSetComment: async (id) => {
     await axios
-      .get(`http://52.87.178.223/comments/${id}`, {
+      .get(`http://be.codein.myportfolio.studio/comments/${id}`, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -53,7 +53,7 @@ const storeBlog = (set) => ({
 
   fetchCommentInput: async (id, data, token) => {
     await axios
-      .post(`http://52.87.178.223/comments/${id}`, data, {
+      .post(`http://be.codein.myportfolio.studio/comments/${id}`, data, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ const storeForum = (set) => ({
   answers: null || [],
   fetchForums: async (token) => {
     await axios
-      .get('http://52.87.178.223/forums', {
+      .get('http://be.codein.myportfolio.studio/forums', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
@@ -114,7 +114,7 @@ const storeForum = (set) => ({
 
   fetchsetAnswer: async (id,key) => {
     await axios
-      .get(`http://52.87.178.223/commentsforum/${id}`, {
+      .get(`http://be.codein.myportfolio.studio/commentsforum/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${key}`,
@@ -132,7 +132,7 @@ const storeForum = (set) => ({
 
   fetchAnswerInput: async (id, data, token) => {
     await axios
-      .post(`http://52.87.178.223/commentsforum/${id}`, data, {
+      .post(`http://be.codein.myportfolio.studio/commentsforum/${id}`, data, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
